@@ -8,11 +8,17 @@ body{
     justify-content: center;
 }
 
-#slide{
+#slideBox{
     background-color: brown;
-    margin-top: 10rem;
-    width: 70vw;
+    margin-top: 5rem;
+    width: 60vw;
     height: 50vh;
+}
+
+#slide{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 
