@@ -1,5 +1,6 @@
 body{
     background-color: rgb(31, 30, 30);
+    color: white;
 }
 
 
@@ -25,4 +26,22 @@ body{
 .spaceAroundMargin{
     margin-top: 5px;
     justify-content: space-around;
+}
+
+.pRelative{
+    position: relative;
+}
+
+.absolutH2{
+    position: absolute;
+    bottom: 50px;
+}
+
+.absolutP{
+    position: absolute;
+    bottom: 0px;
+}
+
+.dNone{
+    display: none;
 }

@@ -31,7 +31,7 @@ immagini.forEach ((elemento) => {
     // console.log(" immagine ", elemento.image);
     contImg = `<img src="./${elemento.image}" alt="" id="slide" >`;
     contenitoreSlide.className = "pRelative"
-    contenitoreSlide.innerHTML = contImg;
+    contenitoreSlide.innerHTML += contImg;
 
     nuovoH2 = document.createElement("h2");
     nuovoH2.innerText = `${elemento.title}`;
@@ -43,9 +43,17 @@ immagini.forEach ((elemento) => {
     document.querySelector("#slideBox").appendChild(nuovoP);
     nuovoP.className = "absolutP";
 
-
-    // btnAvanti.addEventListener("click", cambiaFoto())
+    
 });
 
+btnAvanti.addEventListener("click", function(){
+
+    for (let i = i; i < immagini.length; i++) {
+        const immagineCorrente = array[i];
+
+        console.log(immagineCorrente)
+        
+    }
+})
 
 
