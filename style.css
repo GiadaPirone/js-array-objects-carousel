@@ -7,18 +7,15 @@ body{
 .contenitore{
     display: flex;
     justify-content: center;
-}
-
-#slideBox{
-    background-color: brown;
-    margin-top: 5rem;
     width: 60vw;
     height: 50vh;
+    
 }
 
-#slide{
+
+.contenitore  img{
     height: 100%;
-    width: 100%;
+    width: 60vw;
     object-fit: cover;
 }
 

@@ -22,38 +22,53 @@ const immagini = [
     }
 ];
 
-const contenitoreSlide = document.getElementById("slideBox");
+// const contenitoreSlide = document.getElementById("slideBox");
 const btnAvanti = document.getElementById("btn1");
 const btnIndietro = document.getElementById("btn2");
+const cont = document.querySelector(".contenitore")
 
-immagini.forEach ((elemento) => {
+immagini.forEach ((elemento, index) => {
 
+    contenitoreSlide = document.createElement("div");
+    
     // console.log(" immagine ", elemento.image);
-    contImg = `<img src="./${elemento.image}" alt="" id="slide" >`;
+    contImg = `<img src="./${elemento.image}" alt="" class="slide" >`;
     contenitoreSlide.className = "pRelative"
     contenitoreSlide.innerHTML += contImg;
-
+    
+    
     nuovoH2 = document.createElement("h2");
     nuovoH2.innerText = `${elemento.title}`;
-    document.querySelector("#slideBox").appendChild(nuovoH2);
+    contenitoreSlide.appendChild(nuovoH2);
     nuovoH2.className = "absolutH2";
-
+    
     nuovoP = document.createElement("p");
     nuovoP.innerText = `${ elemento.text }`;
-    document.querySelector("#slideBox").appendChild(nuovoP);
+    contenitoreSlide.appendChild(nuovoP);
     nuovoP.className = "absolutP";
-
     
+    console.log(contenitoreSlide);
+    
+    
+    if ( index > 0){
+        contenitoreSlide.className += " dNone";
+    }
+    
+    cont.appendChild(contenitoreSlide);
 });
+
+tuttiDiv = document.querySelectorAll(".contenitore > div");
+console.log(tuttiDiv);
+let slideCorrente = 0;
 
 btnAvanti.addEventListener("click", function(){
 
-    for (let i = i; i < immagini.length; i++) {
-        const immagineCorrente = array[i];
+    tuttiDiv[slideCorrente].classList.add("dNone");
+    tuttiDiv[slideCorrente+1].classList.remove("dNone");
+    slideCorrente++;
 
-        console.log(immagineCorrente)
-        
-    }
 })
+
+
 
 
