@@ -30,12 +30,18 @@ immagini.forEach ((elemento) => {
 
     // console.log(" immagine ", elemento.image);
     contImg = `<img src="./${elemento.image}" alt="" id="slide" >`;
-    contImg.className = "slide"; 
-    contenitoreSlide.innerHTML += contImg;
+    contenitoreSlide.className = "pRelative"
+    contenitoreSlide.innerHTML = contImg;
 
     nuovoH2 = document.createElement("h2");
-    nuovoH2.innerText += `${elemento.title} ${ elemento.text }`;
-    document.querySelector("img").appendChild(nuovoH2);
+    nuovoH2.innerText = `${elemento.title}`;
+    document.querySelector("#slideBox").appendChild(nuovoH2);
+    nuovoH2.className = "absolutH2";
+
+    nuovoP = document.createElement("p");
+    nuovoP.innerText = `${ elemento.text }`;
+    document.querySelector("#slideBox").appendChild(nuovoP);
+    nuovoP.className = "absolutP";
 
 
     // btnAvanti.addEventListener("click", cambiaFoto())
