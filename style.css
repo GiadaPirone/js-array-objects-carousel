@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(31, 30, 30);
+}
+
+
+.contenitore{
+    display: flex;
+    justify-content: center;
+}
+
+#slide{
+    background-color: brown;
+    margin-top: 10rem;
+    width: 70vw;
+    height: 50vh;
+}
+
+
+.spaceAroundMargin{
+    margin-top: 5px;
+    justify-content: space-around;
+}
